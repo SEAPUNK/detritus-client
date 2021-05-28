@@ -7,6 +7,7 @@
 	<meta name="description" content="Documentation for Detritus Client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -40,8 +41,6 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -53,7 +52,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../modules.html">Detritus Client</a>
 				</li>
 				<li>
 					<a href="commandclientoptions.html">CommandClientOptions</a>
@@ -70,7 +69,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="clusterclientoptions.html" class="tsd-signature-type">ClusterClientOptions</a>
+						<a href="clusterclientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">ClusterClientOptions</a>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">CommandClientOptions</span>
@@ -118,208 +117,208 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="activateonedits" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> activate<wbr>OnEdits</h3>
-					<div class="tsd-signature tsd-kind-icon">activate<wbr>OnEdits<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">activate<wbr>OnEdits<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/commandclient.ts#L33">src/commandclient.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/commandclient.ts#L33">src/commandclient.ts:33</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="cache" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cache</h3>
-					<div class="tsd-signature tsd-kind-icon">cache<span class="tsd-signature-symbol">:</span> <a href="shardclientcacheoptions.html" class="tsd-signature-type">ShardClientCacheOptions</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span></div>
+					<div class="tsd-signature tsd-kind-icon">cache<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><a href="shardclientcacheoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">ShardClientCacheOptions</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="commandclientoptions.html">CommandClientOptions</a>.<a href="commandclientoptions.html#cache">cache</a></p>
+						<p>Inherited from <a href="clusterclientoptions.html">ClusterClientOptions</a>.<a href="clusterclientoptions.html#cache">cache</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/client.ts#L120">src/client.ts:120</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/client.ts#L120">src/client.ts:120</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="gateway" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> gateway</h3>
-					<div class="tsd-signature tsd-kind-icon">gateway<span class="tsd-signature-symbol">:</span> <a href="gatewayoptions.html" class="tsd-signature-type">GatewayOptions</a></div>
+					<div class="tsd-signature tsd-kind-icon">gateway<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">GatewayOptions</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="commandclientoptions.html">CommandClientOptions</a>.<a href="commandclientoptions.html#gateway">gateway</a></p>
+						<p>Inherited from <a href="clusterclientoptions.html">ClusterClientOptions</a>.<a href="clusterclientoptions.html#gateway">gateway</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/client.ts#L121">src/client.ts:121</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/client.ts#L121">src/client.ts:121</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="ignoreme" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ignore<wbr>Me</h3>
-					<div class="tsd-signature tsd-kind-icon">ignore<wbr>Me<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">ignore<wbr>Me<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/commandclient.ts#L34">src/commandclient.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/commandclient.ts#L34">src/commandclient.ts:34</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="imageformat" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> image<wbr>Format</h3>
-					<div class="tsd-signature tsd-kind-icon">image<wbr>Format<span class="tsd-signature-symbol">:</span> <a href="../enums/imageformats.html" class="tsd-signature-type">ImageFormats</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<div class="tsd-signature tsd-kind-icon">image<wbr>Format<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="commandclientoptions.html">CommandClientOptions</a>.<a href="commandclientoptions.html#imageformat">imageFormat</a></p>
+						<p>Inherited from <a href="clusterclientoptions.html">ClusterClientOptions</a>.<a href="clusterclientoptions.html#imageformat">imageFormat</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/client.ts#L122">src/client.ts:122</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/client.ts#L122">src/client.ts:122</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="isbot" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> is<wbr>Bot</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Bot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Bot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="commandclientoptions.html">CommandClientOptions</a>.<a href="commandclientoptions.html#isbot">isBot</a></p>
+						<p>Inherited from <a href="clusterclientoptions.html">ClusterClientOptions</a>.<a href="clusterclientoptions.html#isbot">isBot</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/client.ts#L123">src/client.ts:123</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/client.ts#L123">src/client.ts:123</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="maxconcurrency" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> max<wbr>Concurrency</h3>
-					<div class="tsd-signature tsd-kind-icon">max<wbr>Concurrency<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Concurrency<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="commandclientoptions.html">CommandClientOptions</a>.<a href="commandclientoptions.html#maxconcurrency">maxConcurrency</a></p>
+						<p>Inherited from <a href="clusterclientoptions.html">ClusterClientOptions</a>.<a href="clusterclientoptions.html#maxconcurrency">maxConcurrency</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/clusterclient.ts#L20">src/clusterclient.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/clusterclient.ts#L20">src/clusterclient.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="maxeditduration" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> max<wbr>Edit<wbr>Duration</h3>
-					<div class="tsd-signature tsd-kind-icon">max<wbr>Edit<wbr>Duration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Edit<wbr>Duration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/commandclient.ts#L35">src/commandclient.ts:35</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/commandclient.ts#L35">src/commandclient.ts:35</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="mentionsenabled" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> mentions<wbr>Enabled</h3>
-					<div class="tsd-signature tsd-kind-icon">mentions<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">mentions<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/commandclient.ts#L36">src/commandclient.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/commandclient.ts#L36">src/commandclient.ts:36</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="oncommandcheck" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Command<wbr>Check</h3>
-					<div class="tsd-signature tsd-kind-icon">on<wbr>Command<wbr>Check<span class="tsd-signature-symbol">:</span> <a href="../globals.html#commandclientcommandcheck" class="tsd-signature-type">CommandClientCommandCheck</a></div>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Command<wbr>Check<span class="tsd-signature-symbol">:</span> <a href="../modules.html#commandclientcommandcheck" class="tsd-signature-type" data-tsd-kind="Type alias">CommandClientCommandCheck</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/commandclient.ts#L37">src/commandclient.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/commandclient.ts#L37">src/commandclient.ts:37</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="onmessagecheck" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Message<wbr>Check</h3>
-					<div class="tsd-signature tsd-kind-icon">on<wbr>Message<wbr>Check<span class="tsd-signature-symbol">:</span> <a href="../globals.html#commandclientmessagecheck" class="tsd-signature-type">CommandClientMessageCheck</a></div>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Message<wbr>Check<span class="tsd-signature-symbol">:</span> <a href="../modules.html#commandclientmessagecheck" class="tsd-signature-type" data-tsd-kind="Type alias">CommandClientMessageCheck</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/commandclient.ts#L38">src/commandclient.ts:38</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/commandclient.ts#L38">src/commandclient.ts:38</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="onprefixcheck" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Prefix<wbr>Check</h3>
-					<div class="tsd-signature tsd-kind-icon">on<wbr>Prefix<wbr>Check<span class="tsd-signature-symbol">:</span> <a href="../globals.html#commandclientprefixcheck" class="tsd-signature-type">CommandClientPrefixCheck</a></div>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Prefix<wbr>Check<span class="tsd-signature-symbol">:</span> <a href="../modules.html#commandclientprefixcheck" class="tsd-signature-type" data-tsd-kind="Type alias">CommandClientPrefixCheck</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/commandclient.ts#L39">src/commandclient.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/commandclient.ts#L39">src/commandclient.ts:39</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="pass" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pass</h3>
-					<div class="tsd-signature tsd-kind-icon">pass<span class="tsd-signature-symbol">:</span> <a href="shardclientpassoptions.html" class="tsd-signature-type">ShardClientPassOptions</a></div>
+					<div class="tsd-signature tsd-kind-icon">pass<span class="tsd-signature-symbol">:</span> <a href="shardclientpassoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">ShardClientPassOptions</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="commandclientoptions.html">CommandClientOptions</a>.<a href="commandclientoptions.html#pass">pass</a></p>
+						<p>Inherited from <a href="clusterclientoptions.html">ClusterClientOptions</a>.<a href="clusterclientoptions.html#pass">pass</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/client.ts#L125">src/client.ts:125</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/client.ts#L125">src/client.ts:125</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="prefix" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> prefix</h3>
-					<div class="tsd-signature tsd-kind-icon">prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<div class="tsd-signature tsd-kind-icon">prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/commandclient.ts#L40">src/commandclient.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/commandclient.ts#L40">src/commandclient.ts:40</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="prefixspace" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> prefix<wbr>Space</h3>
-					<div class="tsd-signature tsd-kind-icon">prefix<wbr>Space<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">prefix<wbr>Space<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/commandclient.ts#L42">src/commandclient.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/commandclient.ts#L42">src/commandclient.ts:42</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="prefixes" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> prefixes</h3>
-					<div class="tsd-signature tsd-kind-icon">prefixes<span class="tsd-signature-symbol">:</span> <a href="gatewayrawevents.sessionsreplace.html#array" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">prefixes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/commandclient.ts#L41">src/commandclient.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/commandclient.ts#L41">src/commandclient.ts:41</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="ratelimit" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ratelimit</h3>
-					<div class="tsd-signature tsd-kind-icon">ratelimit<span class="tsd-signature-symbol">:</span> <a href="commandratelimitoptions.html" class="tsd-signature-type">CommandRatelimitOptions</a></div>
+					<div class="tsd-signature tsd-kind-icon">ratelimit<span class="tsd-signature-symbol">:</span> <a href="command.commandratelimitoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">CommandRatelimitOptions</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/commandclient.ts#L43">src/commandclient.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/commandclient.ts#L43">src/commandclient.ts:43</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="ratelimits" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ratelimits</h3>
-					<div class="tsd-signature tsd-kind-icon">ratelimits<span class="tsd-signature-symbol">:</span> <a href="gatewayrawevents.sessionsreplace.html#array" class="tsd-signature-type">Array</a><span class="tsd-signature-symbol">&lt;</span><a href="commandratelimitoptions.html" class="tsd-signature-type">CommandRatelimitOptions</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">ratelimits<span class="tsd-signature-symbol">:</span> <a href="command.commandratelimitoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">CommandRatelimitOptions</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/commandclient.ts#L44">src/commandclient.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/commandclient.ts#L44">src/commandclient.ts:44</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="rest" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> rest</h3>
-					<div class="tsd-signature tsd-kind-icon">rest<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RestOptions</span></div>
+					<div class="tsd-signature tsd-kind-icon">rest<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ClientOptions</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="commandclientoptions.html">CommandClientOptions</a>.<a href="commandclientoptions.html#rest">rest</a></p>
+						<p>Inherited from <a href="clusterclientoptions.html">ClusterClientOptions</a>.<a href="clusterclientoptions.html#rest">rest</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/client.ts#L124">src/client.ts:124</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/client.ts#L124">src/client.ts:124</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="shardcount" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> shard<wbr>Count</h3>
-					<div class="tsd-signature tsd-kind-icon">shard<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">shard<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="commandclientoptions.html">CommandClientOptions</a>.<a href="commandclientoptions.html#shardcount">shardCount</a></p>
+						<p>Inherited from <a href="clusterclientoptions.html">ClusterClientOptions</a>.<a href="clusterclientoptions.html#shardcount">shardCount</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/clusterclient.ts#L21">src/clusterclient.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/clusterclient.ts#L21">src/clusterclient.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -328,19 +327,19 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> shards</h3>
 					<div class="tsd-signature tsd-kind-icon">shards<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="commandclientoptions.html">CommandClientOptions</a>.<a href="commandclientoptions.html#shards">shards</a></p>
+						<p>Inherited from <a href="clusterclientoptions.html">ClusterClientOptions</a>.<a href="clusterclientoptions.html#shards">shards</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/clusterclient.ts#L22">src/clusterclient.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/clusterclient.ts#L22">src/clusterclient.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="useclusterclient" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> use<wbr>Cluster<wbr>Client</h3>
-					<div class="tsd-signature tsd-kind-icon">use<wbr>Cluster<wbr>Client<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<div class="tsd-signature tsd-kind-icon">use<wbr>Cluster<wbr>Client<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/commandclient.ts#L45">src/commandclient.ts:45</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/commandclient.ts#L45">src/commandclient.ts:45</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -349,13 +348,43 @@
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="../classes/clusterclient.html" class="tsd-kind-icon">Cluster<wbr>Client</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/clustermanager.html" class="tsd-kind-icon">Cluster<wbr>Manager</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/commandclient.html" class="tsd-kind-icon">Command<wbr>Client</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/shardclient.html" class="tsd-kind-icon">Shard<wbr>Client</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="clusterclientoptions.html" class="tsd-kind-icon">Cluster<wbr>Client<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="clusterclientrunoptions.html" class="tsd-kind-icon">Cluster<wbr>Client<wbr>Run<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="clustermanageroptions.html" class="tsd-kind-icon">Cluster<wbr>Manager<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="clustermanagerrunoptions.html" class="tsd-kind-icon">Cluster<wbr>Manager<wbr>Run<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="commandattributes.html" class="tsd-kind-icon">Command<wbr>Attributes</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="commandclientadd.html" class="tsd-kind-icon">Command<wbr>Client<wbr>Add</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
@@ -431,6 +460,39 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface">
+						<a href="commandclientrunoptions.html" class="tsd-kind-icon">Command<wbr>Client<wbr>Run<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="commandreply.html" class="tsd-kind-icon">Command<wbr>Reply</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="shardclientcacheoptions.html" class="tsd-kind-icon">Shard<wbr>Client<wbr>Cache<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="shardclientoptions.html" class="tsd-kind-icon">Shard<wbr>Client<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="shardclientpassoptions.html" class="tsd-kind-icon">Shard<wbr>Client<wbr>Pass<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="shardclientrunoptions.html" class="tsd-kind-icon">Shard<wbr>Client<wbr>Run<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="voiceconnectoptions.html" class="tsd-kind-icon">Voice<wbr>Connect<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../modules.html#commandclientcommandcheck" class="tsd-kind-icon">Command<wbr>Client<wbr>Command<wbr>Check</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../modules.html#commandclientmessagecheck" class="tsd-kind-icon">Command<wbr>Client<wbr>Message<wbr>Check</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../modules.html#commandclientprefixcheck" class="tsd-kind-icon">Command<wbr>Client<wbr>Prefix<wbr>Check</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../modules.html#commandclientprefixes" class="tsd-kind-icon">Command<wbr>Client<wbr>Prefixes</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -444,21 +506,9 @@
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
 			</ul>
 		</div>
 	</div>

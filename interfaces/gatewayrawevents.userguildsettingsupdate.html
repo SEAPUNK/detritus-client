@@ -7,6 +7,7 @@
 	<meta name="description" content="Documentation for Detritus Client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -40,8 +41,6 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -53,7 +52,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../modules.html">Detritus Client</a>
 				</li>
 				<li>
 					<a href="../modules/gatewayrawevents.html">GatewayRawEvents</a>
@@ -73,7 +72,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="gatewayrawevents.rawuserguildsettings.html" class="tsd-signature-type">RawUserGuildSettings</a>
+						<a href="gatewayrawevents.rawuserguildsettings.html" class="tsd-signature-type" data-tsd-kind="Interface">RawUserGuildSettings</a>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">UserGuildSettingsUpdate</span>
@@ -105,22 +104,41 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="channel_overrides" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> channel_<wbr>overrides</h3>
-					<div class="tsd-signature tsd-kind-icon">channel_<wbr>overrides<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{}</span></div>
+					<div class="tsd-signature tsd-kind-icon">channel_<wbr>overrides<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="gatewayrawevents.userguildsettingsupdate.html">UserGuildSettingsUpdate</a>.<a href="gatewayrawevents.userguildsettingsupdate.html#channel_overrides">channel_overrides</a></p>
+						<p>Inherited from <a href="gatewayrawevents.rawuserguildsettings.html">RawUserGuildSettings</a>.<a href="gatewayrawevents.rawuserguildsettings.html#channel_overrides">channel_overrides</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/gateway/rawevents.ts#L960">src/gateway/rawevents.ts:960</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/gateway/rawevents.ts#L960">src/gateway/rawevents.ts:960</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-index-signature">
+								<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-symbol">{ </span>channel_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>message_notifications<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>muted<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>channel_<wbr>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>message_<wbr>notifications<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>muted<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="guild_id" class="tsd-anchor"></a>
 					<h3>guild_<wbr>id</h3>
 					<div class="tsd-signature tsd-kind-icon">guild_<wbr>id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="gatewayrawevents.userguildsettingsupdate.html">UserGuildSettingsUpdate</a>.<a href="gatewayrawevents.userguildsettingsupdate.html#guild_id">guild_id</a></p>
+						<p>Inherited from <a href="gatewayrawevents.rawuserguildsettings.html">RawUserGuildSettings</a>.<a href="gatewayrawevents.rawuserguildsettings.html#guild_id">guild_id</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/gateway/rawevents.ts#L967">src/gateway/rawevents.ts:967</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/gateway/rawevents.ts#L967">src/gateway/rawevents.ts:967</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -129,9 +147,9 @@
 					<h3>message_<wbr>notifications</h3>
 					<div class="tsd-signature tsd-kind-icon">message_<wbr>notifications<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="gatewayrawevents.userguildsettingsupdate.html">UserGuildSettingsUpdate</a>.<a href="gatewayrawevents.userguildsettingsupdate.html#message_notifications">message_notifications</a></p>
+						<p>Inherited from <a href="gatewayrawevents.rawuserguildsettings.html">RawUserGuildSettings</a>.<a href="gatewayrawevents.rawuserguildsettings.html#message_notifications">message_notifications</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/gateway/rawevents.ts#L968">src/gateway/rawevents.ts:968</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/gateway/rawevents.ts#L968">src/gateway/rawevents.ts:968</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -140,9 +158,9 @@
 					<h3>mobile_<wbr>push</h3>
 					<div class="tsd-signature tsd-kind-icon">mobile_<wbr>push<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="gatewayrawevents.userguildsettingsupdate.html">UserGuildSettingsUpdate</a>.<a href="gatewayrawevents.userguildsettingsupdate.html#mobile_push">mobile_push</a></p>
+						<p>Inherited from <a href="gatewayrawevents.rawuserguildsettings.html">RawUserGuildSettings</a>.<a href="gatewayrawevents.rawuserguildsettings.html#mobile_push">mobile_push</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/gateway/rawevents.ts#L969">src/gateway/rawevents.ts:969</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/gateway/rawevents.ts#L969">src/gateway/rawevents.ts:969</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -151,9 +169,9 @@
 					<h3>muted</h3>
 					<div class="tsd-signature tsd-kind-icon">muted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="gatewayrawevents.userguildsettingsupdate.html">UserGuildSettingsUpdate</a>.<a href="gatewayrawevents.userguildsettingsupdate.html#muted">muted</a></p>
+						<p>Inherited from <a href="gatewayrawevents.rawuserguildsettings.html">RawUserGuildSettings</a>.<a href="gatewayrawevents.rawuserguildsettings.html#muted">muted</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/gateway/rawevents.ts#L970">src/gateway/rawevents.ts:970</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/gateway/rawevents.ts#L970">src/gateway/rawevents.ts:970</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -162,9 +180,9 @@
 					<h3>suppress_<wbr>everyone</h3>
 					<div class="tsd-signature tsd-kind-icon">suppress_<wbr>everyone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="gatewayrawevents.userguildsettingsupdate.html">UserGuildSettingsUpdate</a>.<a href="gatewayrawevents.userguildsettingsupdate.html#suppress_everyone">suppress_everyone</a></p>
+						<p>Inherited from <a href="gatewayrawevents.rawuserguildsettings.html">RawUserGuildSettings</a>.<a href="gatewayrawevents.rawuserguildsettings.html#suppress_everyone">suppress_everyone</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/d9ce10f/src/gateway/rawevents.ts#L971">src/gateway/rawevents.ts:971</a></li>
+							<li>Defined in <a href="https://github.com/SEAPUNK/detritus-client/blob/35b49e8/src/gateway/rawevents.ts#L971">src/gateway/rawevents.ts:971</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -173,14 +191,20 @@
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class="label tsd-is-external">
+						<span>Internals</span>
 					</li>
 					<li class=" tsd-kind-namespace">
-						<a href="../modules/clusteripctypes.html">ClusterIPCTypes</a>
+						<a href="../modules/collections.html">Collections</a>
 					</li>
 					<li class=" tsd-kind-namespace">
-						<a href="../modules/commandevents.html">Command<wbr>Events</a>
+						<a href="../modules/command.html">Command</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/constants.html">Constants</a>
 					</li>
 					<li class=" tsd-kind-namespace">
 						<a href="../modules/gatewayclientevents.html">Gateway<wbr>Client<wbr>Events</a>
@@ -195,7 +219,16 @@
 						<a href="../modules/mediarawevents.html">Media<wbr>Raw<wbr>Events</a>
 					</li>
 					<li class=" tsd-kind-namespace">
-						<a href="../modules/restresponses.html">Rest<wbr>Responses</a>
+						<a href="../modules/structures.html">Structures</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/utils.html">Utils</a>
+					</li>
+					<li class="label tsd-is-external">
+						<span>Externals</span>
+					</li>
+					<li class=" tsd-kind-namespace tsd-is-external">
+						<a href="../modules/endpoints.html">Endpoints</a>
 					</li>
 				</ul>
 			</nav>
@@ -241,21 +274,9 @@
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
 			</ul>
 		</div>
 	</div>
