@@ -68,6 +68,7 @@
 					<h1>Detritus</h1>
 				</a>
 				<p><img src="https://img.shields.io/npm/v/detritus-client?style=flat-square" alt="npm"></p>
+				<p>blah blah blah i made some changes in here</p>
 				<p>A wheels-attached, pure-TypeScript library for the Discord API.</p>
 				<ul>
 					<li><a href="https://detritusjs.com">API Documentation</a></li>
@@ -100,7 +101,7 @@
 				<a href="#command-client-sample" id="command-client-sample" style="color: inherit; text-decoration: none;">
 					<h3>Command Client Sample</h3>
 				</a>
-				<pre><code class="language-js"><span class="hljs-keyword">const</span> { CommandClient } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;detritus-client&#x27;</span>);
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { CommandClient } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;detritus-client&quot;</span>);
 
 <span class="hljs-comment">// Note: it is not advised to hard-code your bot token directly into the bot source.</span>
 <span class="hljs-comment">//</span>
@@ -108,31 +109,32 @@
 <span class="hljs-comment">// part of your version control system, or an environment variable.</span>
 <span class="hljs-comment">// By default, the CommandClient will use the ClusterClient</span>
 <span class="hljs-comment">// The ShardClient/ClusterClient will be under CommandClient.client as soon as you create the object</span>
-<span class="hljs-keyword">const</span> token = <span class="hljs-string">&#x27;&#x27;</span>;
+<span class="hljs-keyword">const</span> token = <span class="hljs-string">&quot;&quot;</span>;
 <span class="hljs-keyword">const</span> commandClient = <span class="hljs-keyword">new</span> CommandClient(token, {
   <span class="hljs-comment">// Prefix `..`, if you want multiple prefixes pass in `prefixes: [&#x27;..&#x27;, &#x27;...&#x27;]`</span>
-  <span class="hljs-attr">prefix</span>: <span class="hljs-string">&#x27;..&#x27;</span>,
+  <span class="hljs-attr">prefix</span>: <span class="hljs-string">&quot;..&quot;</span>,
 });
 
 <span class="hljs-comment">// Simple ping/pong command</span>
 commandClient.add({
   <span class="hljs-comment">// name describes the command trigger; in this case, ..ping</span>
-  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;ping&#x27;</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;ping&quot;</span>,
   <span class="hljs-attr">run</span>: <span class="hljs-function">(<span class="hljs-params">context, args</span>) =&gt;</span> {
     <span class="hljs-comment">// Commands should return a promise to ensure that errors are handled</span>
-    <span class="hljs-keyword">return</span> context.reply(<span class="hljs-string">&#x27;pong!&#x27;</span>);
+    <span class="hljs-keyword">return</span> context.reply(<span class="hljs-string">&quot;pong!&quot;</span>);
   },
 });
 
 <span class="hljs-comment">// Command demonstrating command pipelines</span>
 commandClient.add({
-  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;owner&#x27;</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;owner&quot;</span>,
   <span class="hljs-comment">// onBefore should return a boolean to indicate whether or not the command should proceed</span>
   <span class="hljs-attr">onBefore</span>: <span class="hljs-function">(<span class="hljs-params">context</span>) =&gt;</span> context.client.isOwner(context.userId),
-  <span class="hljs-attr">onCancel</span>: <span class="hljs-function">(<span class="hljs-params">context</span>) =&gt;</span> context.reply(<span class="hljs-string">&#x27;This command is only available to the bot owner.&#x27;</span>),
+  <span class="hljs-attr">onCancel</span>: <span class="hljs-function">(<span class="hljs-params">context</span>) =&gt;</span>
+    context.reply(<span class="hljs-string">&quot;This command is only available to the bot owner.&quot;</span>),
   <span class="hljs-attr">run</span>: <span class="hljs-keyword">async</span> (context) =&gt; {
     <span class="hljs-comment">// Commands may also run asynchronously.</span>
-    <span class="hljs-keyword">await</span> context.reply(<span class="hljs-string">&#x27;You are the owner of the bot!&#x27;</span>);
+    <span class="hljs-keyword">await</span> context.reply(<span class="hljs-string">&quot;You are the owner of the bot!&quot;</span>);
   },
 });
 
@@ -149,13 +151,13 @@ commandClient.add({
 				<a href="#shard-client-sample" id="shard-client-sample" style="color: inherit; text-decoration: none;">
 					<h3>Shard Client Sample</h3>
 				</a>
-				<pre><code class="language-js"><span class="hljs-keyword">const</span> { ShardClient } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;detritus-client&#x27;</span>);
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { ShardClient } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;detritus-client&quot;</span>);
 
 <span class="hljs-comment">// Note: it is not advised to hard-code your bot token directly into the bot source.</span>
 <span class="hljs-comment">//</span>
 <span class="hljs-comment">// Tokens should be considered secrets and stored in a configuration file that is not</span>
 <span class="hljs-comment">// part of your version control system, or an environment variable.</span>
-<span class="hljs-keyword">const</span> token = <span class="hljs-string">&#x27;&#x27;</span>;
+<span class="hljs-keyword">const</span> token = <span class="hljs-string">&quot;&quot;</span>;
 <span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> ShardClient(token, {
   <span class="hljs-attr">gateway</span>: {
     <span class="hljs-comment">// This will tell our client to fill our Members cache on any of our guilds that are larger than the large threshold you pass in (default 250)</span>
@@ -164,18 +166,24 @@ commandClient.add({
 });
 
 <span class="hljs-comment">// listen to our client&#x27;s eventemitter</span>
-client.on(<span class="hljs-string">&#x27;guildCreate&#x27;</span>, <span class="hljs-keyword">async</span> ({fromUnavailable, guild}) =&gt; {
+client.on(<span class="hljs-string">&quot;guildCreate&quot;</span>, <span class="hljs-keyword">async</span> ({ fromUnavailable, guild }) =&gt; {
   <span class="hljs-keyword">if</span> (fromUnavailable) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Guild <span class="hljs-subst">${guild.name}</span> has just came back from being unavailable`</span>);
+    <span class="hljs-built_in">console</span>.log(
+      <span class="hljs-string">`Guild <span class="hljs-subst">${guild.name}</span> has just came back from being unavailable`</span>
+    );
   } <span class="hljs-keyword">else</span> {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Joined Guild <span class="hljs-subst">${guild.name}</span>, bringing us up to <span class="hljs-subst">${client.guilds.length}</span> guilds.`</span>);
+    <span class="hljs-built_in">console</span>.log(
+      <span class="hljs-string">`Joined Guild <span class="hljs-subst">${guild.name}</span>, bringing us up to <span class="hljs-subst">${client.guilds.length}</span> guilds.`</span>
+    );
   }
 });
 
 <span class="hljs-comment">// listen to our client&#x27;s eventemitter</span>
-client.on(<span class="hljs-string">&#x27;messageCreate&#x27;</span>, <span class="hljs-keyword">async</span> ({message}) =&gt; {
-  <span class="hljs-keyword">if</span> (message.content === <span class="hljs-string">&#x27;!ping&#x27;</span>) {
-    <span class="hljs-keyword">const</span> reply = <span class="hljs-keyword">await</span> message.reply(<span class="hljs-string">&#x27;pong!, deleting message in 5 seconds...&#x27;</span>);
+client.on(<span class="hljs-string">&quot;messageCreate&quot;</span>, <span class="hljs-keyword">async</span> ({ message }) =&gt; {
+  <span class="hljs-keyword">if</span> (message.content === <span class="hljs-string">&quot;!ping&quot;</span>) {
+    <span class="hljs-keyword">const</span> reply = <span class="hljs-keyword">await</span> message.reply(
+      <span class="hljs-string">&quot;pong!, deleting message in 5 seconds...&quot;</span>
+    );
     <span class="hljs-built_in">setTimeout</span>(<span class="hljs-keyword">async</span> () =&gt; {
       <span class="hljs-keyword">await</span> reply.delete();
     }, <span class="hljs-number">5000</span>);
@@ -184,62 +192,70 @@ client.on(<span class="hljs-string">&#x27;messageCreate&#x27;</span>, <span clas
 
 (<span class="hljs-keyword">async</span> () =&gt; {
   <span class="hljs-keyword">await</span> client.run();
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;Successfully connected to Discord!&#x27;</span>);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Successfully connected to Discord!&quot;</span>);
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Currently have <span class="hljs-subst">${client.guilds.length}</span> guilds in cache.`</span>);
   <span class="hljs-comment">// set our presence, we can pass this into the client&#x27;s options too under `gateway.presence`</span>
   client.gateway.setPresence({
     <span class="hljs-attr">activity</span>: {
       <span class="hljs-comment">// What comes after our activity type, x.</span>
-      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;with Detritus&#x27;</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;with Detritus&quot;</span>,
       <span class="hljs-comment">// Type 0 sets our message to `Playing x`</span>
       <span class="hljs-attr">type</span>: <span class="hljs-number">0</span>,
     },
     <span class="hljs-comment">// do-not-disturb us</span>
-    <span class="hljs-attr">status</span>: <span class="hljs-string">&#x27;dnd&#x27;</span>,
+    <span class="hljs-attr">status</span>: <span class="hljs-string">&quot;dnd&quot;</span>,
   });
 })();
 </code></pre>
 				<a href="#cluster-client-sample" id="cluster-client-sample" style="color: inherit; text-decoration: none;">
 					<h3>Cluster Client Sample</h3>
 				</a>
-				<pre><code class="language-js"><span class="hljs-keyword">const</span> { ClusterClient } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;detritus-client&#x27;</span>);
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { ClusterClient } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;detritus-client&quot;</span>);
 
 <span class="hljs-comment">// Note: it is not advised to hard-code your bot token directly into the bot source.</span>
 <span class="hljs-comment">//</span>
 <span class="hljs-comment">// Tokens should be considered secrets and stored in a configuration file that is not</span>
 <span class="hljs-comment">// part of your version control system, or an environment variable.</span>
-<span class="hljs-keyword">const</span> token = <span class="hljs-string">&#x27;&#x27;</span>;
+<span class="hljs-keyword">const</span> token = <span class="hljs-string">&quot;&quot;</span>;
 <span class="hljs-keyword">const</span> cluster = <span class="hljs-keyword">new</span> ClusterClient(token, {
   <span class="hljs-attr">gateway</span>: {
     <span class="hljs-comment">// Pass in a presence we will send with the identify payload</span>
     <span class="hljs-attr">presence</span>: {
       <span class="hljs-attr">activity</span>: {
         <span class="hljs-comment">// What comes after our activity type, x.</span>
-        <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;with Detritus ClusterClient&#x27;</span>,
+        <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;with Detritus ClusterClient&quot;</span>,
         <span class="hljs-comment">// Type 0 sets our message to `Playing x`</span>
         <span class="hljs-attr">type</span>: <span class="hljs-number">0</span>,
       },
       <span class="hljs-comment">// do-not-disturb us</span>
-      <span class="hljs-attr">status</span>: <span class="hljs-string">&#x27;dnd&#x27;</span>,
+      <span class="hljs-attr">status</span>: <span class="hljs-string">&quot;dnd&quot;</span>,
     },
   },
 });
 
 <span class="hljs-comment">// listen to our client&#x27;s eventemitter</span>
 <span class="hljs-comment">// `shard` (which is the ShardClient the event originated from) is added onto EVERY event that you listen to on the cluster client</span>
-cluster.on(<span class="hljs-string">&#x27;guildCreate&#x27;</span>, <span class="hljs-keyword">async</span> ({fromUnavailable, guild, shard}) =&gt; {
+cluster.on(<span class="hljs-string">&quot;guildCreate&quot;</span>, <span class="hljs-keyword">async</span> ({ fromUnavailable, guild, shard }) =&gt; {
   <span class="hljs-keyword">if</span> (fromUnavailable) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Shard #<span class="hljs-subst">${shard.shardId}</span>:`</span>, <span class="hljs-string">`Guild <span class="hljs-subst">${guild.name}</span> has just came back from being unavailable`</span>);
+    <span class="hljs-built_in">console</span>.log(
+      <span class="hljs-string">`Shard #<span class="hljs-subst">${shard.shardId}</span>:`</span>,
+      <span class="hljs-string">`Guild <span class="hljs-subst">${guild.name}</span> has just came back from being unavailable`</span>
+    );
   } <span class="hljs-keyword">else</span> {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Shard #<span class="hljs-subst">${shard.shardId}</span>:`</span>, <span class="hljs-string">`Joined Guild <span class="hljs-subst">${guild.name}</span>, bringing us up to <span class="hljs-subst">${client.guilds.length}</span> guilds.`</span>);
+    <span class="hljs-built_in">console</span>.log(
+      <span class="hljs-string">`Shard #<span class="hljs-subst">${shard.shardId}</span>:`</span>,
+      <span class="hljs-string">`Joined Guild <span class="hljs-subst">${guild.name}</span>, bringing us up to <span class="hljs-subst">${client.guilds.length}</span> guilds.`</span>
+    );
   }
 });
 
 <span class="hljs-comment">// listen to our client&#x27;s eventemitter</span>
 <span class="hljs-comment">// `shard` (which is the ShardClient the event originated from) is added onto EVERY event that you listen to on the cluster client</span>
-cluster.on(<span class="hljs-string">&#x27;messageCreate&#x27;</span>, <span class="hljs-keyword">async</span> ({message, shard}) =&gt; {
-  <span class="hljs-keyword">if</span> (message.content === <span class="hljs-string">&#x27;!ping&#x27;</span>) {
-    <span class="hljs-keyword">const</span> reply = <span class="hljs-keyword">await</span> message.reply(<span class="hljs-string">`pong on shard #<span class="hljs-subst">${shard.shardId}</span>!, deleting message in 5 seconds...`</span>);
+cluster.on(<span class="hljs-string">&quot;messageCreate&quot;</span>, <span class="hljs-keyword">async</span> ({ message, shard }) =&gt; {
+  <span class="hljs-keyword">if</span> (message.content === <span class="hljs-string">&quot;!ping&quot;</span>) {
+    <span class="hljs-keyword">const</span> reply = <span class="hljs-keyword">await</span> message.reply(
+      <span class="hljs-string">`pong on shard #<span class="hljs-subst">${shard.shardId}</span>!, deleting message in 5 seconds...`</span>
+    );
     <span class="hljs-built_in">setTimeout</span>(<span class="hljs-keyword">async</span> () =&gt; {
       <span class="hljs-keyword">await</span> reply.delete();
     }, <span class="hljs-number">5000</span>);
@@ -249,7 +265,9 @@ cluster.on(<span class="hljs-string">&#x27;messageCreate&#x27;</span>, <span cla
 (<span class="hljs-keyword">async</span> () =&gt; {
   <span class="hljs-comment">// shards are made after the cluster is ran, found in `ClusterClient.shards`.</span>
   <span class="hljs-keyword">await</span> cluster.run();
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Successfully launched shards <span class="hljs-subst">${cluster.shardStart}</span> to <span class="hljs-subst">${cluster.shardEnd}</span> with a shardCount of <span class="hljs-subst">${cluster.shardCount}</span>`</span>);
+  <span class="hljs-built_in">console</span>.log(
+    <span class="hljs-string">`Successfully launched shards <span class="hljs-subst">${cluster.shardStart}</span> to <span class="hljs-subst">${cluster.shardEnd}</span> with a shardCount of <span class="hljs-subst">${cluster.shardCount}</span>`</span>
+  );
 })();
 </code></pre>
 				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
