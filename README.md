@@ -1,5 +1,8 @@
 # Detritus
+
 ![npm](https://img.shields.io/npm/v/detritus-client?style=flat-square)
+
+blah blah blah i made some changes in here
 
 A wheels-attached, pure-TypeScript library for the Discord API.
 
@@ -32,7 +35,7 @@ directory.
 ### Command Client Sample
 
 ```js
-const { CommandClient } = require('detritus-client');
+const { CommandClient } = require("detritus-client");
 
 // Note: it is not advised to hard-code your bot token directly into the bot source.
 //
@@ -40,31 +43,32 @@ const { CommandClient } = require('detritus-client');
 // part of your version control system, or an environment variable.
 // By default, the CommandClient will use the ClusterClient
 // The ShardClient/ClusterClient will be under CommandClient.client as soon as you create the object
-const token = '';
+const token = "";
 const commandClient = new CommandClient(token, {
   // Prefix `..`, if you want multiple prefixes pass in `prefixes: ['..', '...']`
-  prefix: '..',
+  prefix: "..",
 });
 
 // Simple ping/pong command
 commandClient.add({
   // name describes the command trigger; in this case, ..ping
-  name: 'ping',
+  name: "ping",
   run: (context, args) => {
     // Commands should return a promise to ensure that errors are handled
-    return context.reply('pong!');
+    return context.reply("pong!");
   },
 });
 
 // Command demonstrating command pipelines
 commandClient.add({
-  name: 'owner',
+  name: "owner",
   // onBefore should return a boolean to indicate whether or not the command should proceed
   onBefore: (context) => context.client.isOwner(context.userId),
-  onCancel: (context) => context.reply('This command is only available to the bot owner.'),
+  onCancel: (context) =>
+    context.reply("This command is only available to the bot owner."),
   run: async (context) => {
     // Commands may also run asynchronously.
-    await context.reply('You are the owner of the bot!');
+    await context.reply("You are the owner of the bot!");
   },
 });
 
@@ -82,13 +86,13 @@ commandClient.add({
 ### Shard Client Sample
 
 ```js
-const { ShardClient } = require('detritus-client');
+const { ShardClient } = require("detritus-client");
 
 // Note: it is not advised to hard-code your bot token directly into the bot source.
 //
 // Tokens should be considered secrets and stored in a configuration file that is not
 // part of your version control system, or an environment variable.
-const token = '';
+const token = "";
 const client = new ShardClient(token, {
   gateway: {
     // This will tell our client to fill our Members cache on any of our guilds that are larger than the large threshold you pass in (default 250)
@@ -97,18 +101,24 @@ const client = new ShardClient(token, {
 });
 
 // listen to our client's eventemitter
-client.on('guildCreate', async ({fromUnavailable, guild}) => {
+client.on("guildCreate", async ({ fromUnavailable, guild }) => {
   if (fromUnavailable) {
-    console.log(`Guild ${guild.name} has just came back from being unavailable`);
+    console.log(
+      `Guild ${guild.name} has just came back from being unavailable`
+    );
   } else {
-    console.log(`Joined Guild ${guild.name}, bringing us up to ${client.guilds.length} guilds.`);
+    console.log(
+      `Joined Guild ${guild.name}, bringing us up to ${client.guilds.length} guilds.`
+    );
   }
 });
 
 // listen to our client's eventemitter
-client.on('messageCreate', async ({message}) => {
-  if (message.content === '!ping') {
-    const reply = await message.reply('pong!, deleting message in 5 seconds...');
+client.on("messageCreate", async ({ message }) => {
+  if (message.content === "!ping") {
+    const reply = await message.reply(
+      "pong!, deleting message in 5 seconds..."
+    );
     setTimeout(async () => {
       await reply.delete();
     }, 5000);
@@ -117,18 +127,18 @@ client.on('messageCreate', async ({message}) => {
 
 (async () => {
   await client.run();
-  console.log('Successfully connected to Discord!');
+  console.log("Successfully connected to Discord!");
   console.log(`Currently have ${client.guilds.length} guilds in cache.`);
   // set our presence, we can pass this into the client's options too under `gateway.presence`
   client.gateway.setPresence({
     activity: {
       // What comes after our activity type, x.
-      name: 'with Detritus',
+      name: "with Detritus",
       // Type 0 sets our message to `Playing x`
       type: 0,
     },
     // do-not-disturb us
-    status: 'dnd',
+    status: "dnd",
   });
 })();
 ```
@@ -136,44 +146,52 @@ client.on('messageCreate', async ({message}) => {
 ### Cluster Client Sample
 
 ```js
-const { ClusterClient } = require('detritus-client');
+const { ClusterClient } = require("detritus-client");
 
 // Note: it is not advised to hard-code your bot token directly into the bot source.
 //
 // Tokens should be considered secrets and stored in a configuration file that is not
 // part of your version control system, or an environment variable.
-const token = '';
+const token = "";
 const cluster = new ClusterClient(token, {
   gateway: {
     // Pass in a presence we will send with the identify payload
     presence: {
       activity: {
         // What comes after our activity type, x.
-        name: 'with Detritus ClusterClient',
+        name: "with Detritus ClusterClient",
         // Type 0 sets our message to `Playing x`
         type: 0,
       },
       // do-not-disturb us
-      status: 'dnd',
+      status: "dnd",
     },
   },
 });
 
 // listen to our client's eventemitter
 // `shard` (which is the ShardClient the event originated from) is added onto EVERY event that you listen to on the cluster client
-cluster.on('guildCreate', async ({fromUnavailable, guild, shard}) => {
+cluster.on("guildCreate", async ({ fromUnavailable, guild, shard }) => {
   if (fromUnavailable) {
-    console.log(`Shard #${shard.shardId}:`, `Guild ${guild.name} has just came back from being unavailable`);
+    console.log(
+      `Shard #${shard.shardId}:`,
+      `Guild ${guild.name} has just came back from being unavailable`
+    );
   } else {
-    console.log(`Shard #${shard.shardId}:`, `Joined Guild ${guild.name}, bringing us up to ${client.guilds.length} guilds.`);
+    console.log(
+      `Shard #${shard.shardId}:`,
+      `Joined Guild ${guild.name}, bringing us up to ${client.guilds.length} guilds.`
+    );
   }
 });
 
 // listen to our client's eventemitter
 // `shard` (which is the ShardClient the event originated from) is added onto EVERY event that you listen to on the cluster client
-cluster.on('messageCreate', async ({message, shard}) => {
-  if (message.content === '!ping') {
-    const reply = await message.reply(`pong on shard #${shard.shardId}!, deleting message in 5 seconds...`);
+cluster.on("messageCreate", async ({ message, shard }) => {
+  if (message.content === "!ping") {
+    const reply = await message.reply(
+      `pong on shard #${shard.shardId}!, deleting message in 5 seconds...`
+    );
     setTimeout(async () => {
       await reply.delete();
     }, 5000);
@@ -183,7 +201,9 @@ cluster.on('messageCreate', async ({message, shard}) => {
 (async () => {
   // shards are made after the cluster is ran, found in `ClusterClient.shards`.
   await cluster.run();
-  console.log(`Successfully launched shards ${cluster.shardStart} to ${cluster.shardEnd} with a shardCount of ${cluster.shardCount}`);
+  console.log(
+    `Successfully launched shards ${cluster.shardStart} to ${cluster.shardEnd} with a shardCount of ${cluster.shardCount}`
+  );
 })();
 ```
 
